@@ -1,13 +1,219 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-color: rgb(116, 113, 113);
+}
+nav{
+  width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(147, 194, 255);
+  padding: 6px 0px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+nav a{
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.navItems{
+  text-decoration: none;
+  margin: 0px 10px;
+}
+.Navbar input{
+  padding: 2px 2px;
+  border-radius: 8px;
+  border: 3px solid blue;
+}
+.Navbar input::placeholder{
+  padding: 2px 8px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#searchbtn{
+  margin: 0px 8px;
+  padding: 0px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  color: rgb(23, 52, 182);
+}
+#searchbtn:hover{
+  background-color:rgb(23, 52, 182) ;
+  color: white;
+}
+
+/* Movie List  */
+
+.movies-list{
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr;
+  width: 800px;
+  margin: 5px auto;
+  background-color: rgba(178, 223, 236, 0.477);
+}
+/* .movie{
+  background-color: rgba(75, 155, 235, 0.648);
+  max-width: 400px;
+  height: auto;
+  margin: 10px auto;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px black;
+} */
+/* .tags{
+  color: black;
+} */
+a{
+  text-decoration: none;
+}
+#image{
+  height: 220px;
+  width: 400px;
+  border-radius: 8px;
+}
+.loader{
+  width: 200px;
+  height: 200px;
+  border-left: 3px black dashed;
+  border-top: 3px black dashed;
+  border-radius: 50%;
+  margin: 50px auto;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes loading {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* Movie Details  */
+.MovieDetail{
+  max-width: 800px;
+  box-sizing: border-box;
+  height: auto;
+  padding: 20px 20px;
+  margin: 5px auto;
+  background-color: rgba(178, 223, 236, 0.477);
+
+}
+.MovieDetail img{
+  height: 400px;
+  width: 600px;
+}
+
+.MovieDetail button{
+  background-color: red;
+  color: white;
+  border: crimson;
+  padding: 10px;
+  margin: 5px 0px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.MovieDetail button:active{
+  background-color: white;
+  color: red;
+  border: red;
+}
+
+/* Add Movie  */
+.add-movie, .update-movie{
+  background-color: rgb(215, 215, 206);
+  max-width: 800px;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+.add-movie form, .update-movie form{
+  width: auto;
+  padding: 20px;
+  margin: 20px ;
+  border: solid 2px black;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1.5fr 4fr;
+  row-gap: 15px;
+  align-items: center;
+  box-shadow: 0px 5px 5px black;
+}
+label{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.add-movie form input, .update-movie form input{
+  height: 40px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  background-color: rgba(242, 255, 219, 0.979);
+  box-shadow: 1px -4px 5px black;
+}
+.add-movie form input:focus{
+  background-color: white;
+}
+
+#submitbtn, #submitbtnupdate{
+  background-color: rgba(255, 0, 0, 0.925);
+  color: white;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-shadow: 5px 5px 15px black;
+}
+#submitbtn:hover, #submitbtnupdate:hover{
+  background-color: white;
+  border: 4px solid rgba(255, 0, 0, 0.925);
+  color: black;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-shadow: 5px 5px 15px rgba(255, 0, 0, 0.925);
+}
+#submitbtn:active, #submitbtnupdate:active{
+  background-color: rgb(114, 241, 114);
+  box-shadow: 5px 5px 15px rgba(94, 255, 0, 0.925);
+}
+
+/* BootStrap  */
+.card{
+  width: 20rem;
+  color: black;
+  margin: 10px auto;
+  box-shadow: 5px 1px 9px black;
+}
+.card:hover{
+  transform: scale(1.09);
+  transition: 0.6s;
+}
+.card img{
+  padding: 5px;
+  height: 200px;
+  border-radius: 10px;
+}
+#heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(80, 150, 241);
+  margin:0px auto;
+  position: sticky;
+  top: 50px;
+  max-width: 800px;
+  height: 3.4rem;
+  z-index: 1;
 }
