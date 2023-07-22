@@ -6,6 +6,7 @@ import MovieDetails from './Components/MovieDetails';
 import AddMovie from './Components/AddMovie';
 import UpdateMovie from './Components/UpdateMovie';
 import SearchedMovies from './Components/SearchedMovies';
+import ErrorPage from './Components/ErrorPage';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <NavBar />
         <Switch>
 
-          <Route exact path="/">
+          <Route exact path="/Movies">
             <Home />
           </Route>
 
@@ -31,7 +32,11 @@ function App() {
           </Route>
 
           <Route path="/search:searchkeyword">
-            <SearchedMovies/>
+            <SearchedMovies />
+          </Route>
+
+          <Route>
+            <ErrorPage />
           </Route>
 
         </Switch>

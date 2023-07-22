@@ -8,7 +8,7 @@ export default function NavBar() {
 
   return (
     <nav>
-      <a href="/">Home</a>
+      <a href="/Movies">Home</a>
       <div className="Navbar">
         <input type="search" placeholder="Search the movie" value={search} onChange={(e) => { setsearch(e.target.value) }} />
         <Link to={`/search${search}`}><button id="searchbtn">Search</button></Link>
