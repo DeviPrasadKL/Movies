@@ -27,7 +27,7 @@ export default function AddMovie() {
     })
       .then(() => {
         alert("new movie succesfully added")
-        h.push("/")
+        h.push("/Movies");
         
         // window.location.reload()   //If u want to Reload the page then
       })

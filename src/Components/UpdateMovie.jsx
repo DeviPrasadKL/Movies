@@ -43,7 +43,7 @@ export default function UpdateMovie() {
             body: JSON.stringify(updateMovie),
         }).then(() => {
             alert("Updated movie succesfully");
-            h.push("/");
+            h.push("/Movies");
         });
     };
 
