@@ -22,10 +22,6 @@ useEffect(()=>{
   }, 1000)
 },[])
 
-  // fetch("http://localhost:4000/movies")
-  //     .then( res => res.json() )
-  //     .then((data) => { setmovies(data) });
-
   return (
     <>
       {error && <h1>{error}</h1>}
