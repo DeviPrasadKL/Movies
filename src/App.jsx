@@ -6,7 +6,7 @@ import MovieDetails from './Components/MovieDetails';
 import AddMovie from './Components/AddMovie';
 import UpdateMovie from './Components/UpdateMovie';
 import SearchedMovies from './Components/SearchedMovies';
-import ErrorPage from './Components/ErrorPage';
+import NotFound from './Components/NotFound';
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function App() {
           </Route>
 
           <Route>
-            <ErrorPage />
+            <NotFound />
           </Route>
 
         </Switch>
