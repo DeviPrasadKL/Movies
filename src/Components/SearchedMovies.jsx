@@ -11,7 +11,7 @@ export default function SearchedMovies() {
     let [error, seterror] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:4000/movies")
+        fetch("https://moviesapi-cm0p.onrender.com/movies")
             .then((res) => {
                 if (res.ok === false) {
                     throw Error("Searching data not found in this API")
