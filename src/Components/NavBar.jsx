@@ -13,7 +13,7 @@ export default function NavBar() {
         <input type="search" placeholder="Search the movie" value={search} onChange={(e) => { setsearch(e.target.value) }} />
         <Link to={`/search${search}`}><button id="searchbtn">Search</button></Link>
         <Link to="/addmovie" className='navItems'>Add New Movie</Link>
-        <Link to="/favorites" className='navItems'>Favorites </Link>
+        {/* <Link to="/favorites" className='navItems'>Favorites </Link> */}
       </div>
     </nav>
   );
