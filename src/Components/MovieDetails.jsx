@@ -20,7 +20,7 @@ export default function MovieDetails() {
           }
           return res.json()
         })
-        .then((data) => { setMovie(data); setpending(false); console.log(movie); })
+        .then((data) => { setMovie(data); setpending(false);})
         .catch((err) => { seterror(err.message); setpending(false) })
     }, 1000)
   }, [id]);

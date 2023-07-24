@@ -17,7 +17,7 @@ useEffect(()=>{
         }
         return res.json()
       })
-      .then((data) => { setmovies(data); setpending(false); console.log(data); })
+      .then((data) => { setmovies(data); setpending(false); })
       .catch((err) => { seterror(err.message); setpending(false) })
   }, 1000)
 },[])
