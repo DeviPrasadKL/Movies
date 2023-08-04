@@ -22,13 +22,6 @@ export default function MovieItems({ movies, title }) {
                                         <a href="/" className="btn btn-dark">More details</a>
                                     </div>
                                 </div>
-
-
-                                {/* <div className="movie">
-                                <img id="image" src={movie.poster} alt="MoviePoster" />
-                                <h2 className="tags">{movie.movieName}</h2>
-                                <h3 className="tags">{movie.hero}</h3>
-                            </div> */}
                             </Link>
                         )
                     })
