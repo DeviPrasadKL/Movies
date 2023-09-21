@@ -37,7 +37,7 @@ export default function UpdateMovie() {
         e.preventDefault();
         let updateMovie = { movieName, hero, gener, rating, poster };
 
-        fetch("https://moviesapi-cm0p.onrender.com/" + id, {
+        fetch("https://moviesapi-cm0p.onrender.com/movie/" + id, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updateMovie),
