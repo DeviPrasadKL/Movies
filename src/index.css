@@ -55,7 +55,7 @@ nav a {
   color: white;
 }
 
-.icons{
+.icons {
   height: 2rem;
 }
 
@@ -89,6 +89,19 @@ nav a {
 
   .Navbar input {
     width: 9rem;
+  }
+
+  .add-movie form,
+  .update-movie form {
+    width: auto;
+    padding: 20px;
+    margin: 20px;
+    border: solid 2px black;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1.5fr !important;
+    align-items: center;
+    box-shadow: 0px 5px 5px black;
   }
 }
 
