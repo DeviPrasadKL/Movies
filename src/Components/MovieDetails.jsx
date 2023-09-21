@@ -20,7 +20,7 @@ export default function MovieDetails() {
           }
           return res.json()
         })
-        .then((data) => { setMovie(data); setpending(false);})
+        .then((data) => { setMovie(data); setpending(false); })
         .catch((err) => { seterror(err.message); setpending(false) })
     }, 1000)
   }, [id]);
@@ -37,8 +37,12 @@ export default function MovieDetails() {
 
   return (
     <div>
-      {error && <h1>{error}</h1>}
-      {pending && <div className="loader"></div>}
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        {error && <h1>{error}</h1>}
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        {pending && <div className="loader"> </div>}
+      </div>
       {movie && <div className="MovieDetail">
         <img src={movie?.poster} alt={movie.poster} />
         <h1>Movie name : {movie.movieName} </h1>

@@ -24,11 +24,15 @@ export default function SearchedMovies() {
 
     return (
         <>
-      {error && <h1>{error}</h1>}
-      {pending && <div className="loader"> </div>} 
-      {movies && <div className="Genere">
-        <MovieItems movies={movies.filter((movie)=>{ return (movie.movieName.toUpperCase().includes(searchkeyword.toUpperCase()))})}  title="searched movies" />
-      </div>}
-    </>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                {error && <h1>{error}</h1>}
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                {pending && <div className="loader"> </div>}
+            </div>
+            {movies && <div className="Genere">
+                <MovieItems movies={movies.filter((movie) => { return (movie.movieName.toUpperCase().includes(searchkeyword.toUpperCase())) })} title="searched movies" />
+            </div>}
+        </>
     );
 }
