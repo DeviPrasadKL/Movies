@@ -55,6 +55,10 @@ nav a {
   color: white;
 }
 
+.icons{
+  height: 2rem;
+}
+
 /* Movie List  */
 
 .movies-list {
@@ -76,8 +80,15 @@ nav a {
     width: 20rem !important;
   }
 
-  .nav {
-    width: 0px !important;
+  nav {
+    width: auto;
+    flex-direction: column-reverse;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .Navbar input {
+    width: 9rem;
   }
 }
 
@@ -244,7 +255,7 @@ label {
   background-color: rgb(80, 150, 241);
   margin: 0px auto;
   position: sticky;
-  top: 50px;
+  top: 45px;
   max-width: 800px;
   height: 3.4rem;
   z-index: 1;
