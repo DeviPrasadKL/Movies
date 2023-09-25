@@ -9,7 +9,8 @@ export default function NavBar() {
 
   return (
     <nav>
-      <a href="/Movies" style={{paddingRight:"1rem"}}><img className="icons" src={home} alt=""/></a>
+      <Link to="/Movies" style={{paddingRight:"1rem"}}><img className="icons" src={home} alt=""/></Link>
+      {/* <a href="/Movies" style={{paddingRight:"1rem"}}><img className="icons" src={home} alt=""/></a> */}
       <div className="Navbar">
         <input type="search" placeholder="Search the movie" value={search} onChange={(e) => { setsearch(e.target.value) }} />
         <Link to={`/search${search}`}><button id="searchbtn">Search</button></Link>
