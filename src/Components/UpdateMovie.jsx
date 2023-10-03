@@ -7,7 +7,6 @@ export default function UpdateMovie() {
     let { id } = useParams();
     let h = useHistory();
 
-
     let [movieName, setMovieName] = useState("");
     let [hero, setHero] = useState("");
     let [gener, setGener] = useState("");
