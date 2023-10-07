@@ -273,13 +273,3 @@ label {
   }
 }
 /* For Mobile  ends */
-
-/* @media (max-width: 1270px) {
-  .movies-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-
-} */
