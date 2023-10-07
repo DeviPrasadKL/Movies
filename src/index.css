@@ -280,12 +280,7 @@ label {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 970px) {
-  .movies-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
 @media (max-width: 640px) {
   .movies-list {
     display: grid;
