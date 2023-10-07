@@ -274,7 +274,6 @@ label {
 }
 /* For Mobile  ends */
 
-/* Tablet Starts */
 /* @media (max-width: 1270px) {
   .movies-list {
     display: grid;
@@ -293,4 +292,3 @@ label {
     grid-template-columns: repeat(1, 1fr);
   }
 } */
-/* Tablet ends  */
