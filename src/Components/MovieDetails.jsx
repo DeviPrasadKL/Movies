@@ -7,9 +7,7 @@ export default function MovieDetails() {
   let h = useHistory();
 
   const [movies, pending, error] = useFetch("https://moviesapi-cm0p.onrender.com/movie/" + id);
-
   const movie = movies;
-console.log(movies + "Movies froom id");
 
   // Deleting The Movie 
   let deleteMovie = () => {
