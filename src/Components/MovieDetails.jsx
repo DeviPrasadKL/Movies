@@ -6,6 +6,7 @@ export default function MovieDetails() {
   let { id } = useParams();
   let h = useHistory();
 
+  //Custom hook for fetching data
   const [movies, pending, error] = useFetch("https://moviesapi-cm0p.onrender.com/movie/" + id);
   const movie = movies;
 
