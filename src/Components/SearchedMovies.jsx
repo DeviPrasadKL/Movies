@@ -1,26 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import MovieItems from './MovieItems';
-import { useState, useEffect } from 'react';
+import useFetch from './CustomHooks/useFetch';
 
 export default function SearchedMovies() {
     let { searchkeyword } = useParams();
 
-    let [movies, setmovies] = useState(null);
-    let [pending, setpending] = useState(true);
-    let [error, seterror] = useState(null);
-
-    useEffect(() => {
-        fetch("https://moviesapi-cm0p.onrender.com/movies")
-            .then((res) => {
-                if (res.ok === false) {
-                    throw Error("Searching data not found in this API")
-                }
-                return res.json()
-            })
-            .then((data) => { setmovies(data); setpending(false) })
-            .catch((err) => { seterror(err.message); setpending(false) })
-    }, [])
+    const [movies, pending, error] = useFetch("https://moviesapi-cm0p.onrender.com/movies");
 
     return (
         <>

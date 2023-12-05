@@ -1,33 +1,15 @@
-import React, { useEffect } from 'react';
 import MovieItems from './MovieItems';
-import { useState } from 'react';
+import useFetch from './CustomHooks/useFetch';
 
 export default function Home() {
-  let [movies, setmovies] = useState(null);
-  let [pending, setpending] = useState(true);
-  let [error, seterror] = useState(null);
-
-  //Use effect is used to fetch data only for initial rendering
-  useEffect(() => {
-    setTimeout(() => {
-      fetch("https://moviesapi-cm0p.onrender.com/movies")
-        .then((res) => {
-          if (res.ok === false) {
-            throw Error("Searching data not found in this API")
-          }
-          return res.json()
-        })
-        .then((data) => { setmovies(data); setpending(false); })
-        .catch((err) => { seterror(err.message); })
-    }, 1000)
-  }, [])
+  const [movies, pending, error] = useFetch("https://moviesapi-cm0p.onrender.com/movies");
 
   return (
     <>
-    <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-      {error && <h1>{error}</h1>}
-    </div>
-      <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        {error && <h1>{error}</h1>}
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         {pending && <div className="loader"> </div>} {/*pending == true */}
       </div>
       {movies && <div className="Genere"> {/* movies != null) */}

@@ -1,30 +1,15 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import { useHistory, useParams, Link } from "react-router-dom";
+import useFetch from './CustomHooks/useFetch';
 
 export default function MovieDetails() {
   let { id } = useParams();
   let h = useHistory();
 
-  let [movie, setMovie] = useState(null);
-  let [pending, setpending] = useState(true);
-  let [error, seterror] = useState(null);
+  const [movies, pending, error] = useFetch("https://moviesapi-cm0p.onrender.com/movie/" + id);
 
-  // This is used to redirect the page and fetch only one movie 
-  useEffect(() => {
-    setTimeout(() => {
-      fetch("https://moviesapi-cm0p.onrender.com/movie/" + id)
-        .then((res) => {
-          if (res.ok === false) {
-            throw Error("Searching data not found in this API")
-          }
-          return res.json()
-        })
-        .then((data) => { setMovie(data); setpending(false); })
-        .catch((err) => { seterror(err.message); setpending(false) })
-    }, 1000)
-  }, [id]);
-
+  const movie = movies;
+console.log(movies + "Movies froom id");
 
   // Deleting The Movie 
   let deleteMovie = () => {
