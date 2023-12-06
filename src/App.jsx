@@ -35,7 +35,7 @@ function App() {
             <SearchedMovies />
           </Route>
 
-          <Route>
+          <Route path="*">
             <NotFound />
           </Route>
 
