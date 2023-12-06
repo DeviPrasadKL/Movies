@@ -2,6 +2,8 @@ import MovieItems from './MovieItems';
 import useFetch from './CustomHooks/useFetch';
 
 export default function Home() {
+
+  //Custom hook for fetching data
   const [movies, pending, error] = useFetch("https://moviesapi-cm0p.onrender.com/movies");
 
   return (
